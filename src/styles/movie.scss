@@ -1,0 +1,41 @@
+.moviecard {
+  width: calc(25% - 20px);
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 12px;
+  margin: 10px;
+  text-decoration: none;
+  color: #000;
+}
+.moviecard__poster {
+  width: 100%;
+  height: auto;
+}
+
+// Movie Details
+.moviedetail {
+  width: 100%;
+  height: calc(100vh - 74px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.moviedetail__container {
+  min-width: 800px;
+  max-width: 90%;
+  height: 500px;
+  display: flex;
+  background-color: #e26049;
+  border-radius: 5px;
+  color: #fff;
+  text-shadow: 0.5px 0.5px black;
+}
+.moviedetail__container .moviedetail__poster {
+  height: 100%;
+  width: auto;
+  border-radius: 5px 0 0 5px;
+}
+.moviedetail__container .moviedetail__info {
+  width: 100%;
+  padding: 12px;
+}
