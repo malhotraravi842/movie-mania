@@ -22,3 +22,9 @@ export async function getMovieDetail(id) {
 
   return response;
 }
+
+export async function getTrendingMovies() {
+  const response = await API.get(`/trending/movie/week`).then((res) => res);
+
+  return response;
+}

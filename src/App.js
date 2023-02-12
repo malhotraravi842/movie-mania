@@ -1,11 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Dashboard, MovieDetail } from "./pages";
 import Navbar from "./components/Navbar";
-import { getMovies } from "./lib/api";
+import { getMovies, getTrendingMovies } from "./lib/api";
 import { Routes, Route } from "react-router-dom";
 
 const App = () => {
   const [movieData, setMovieData] = useState("");
+
+  useEffect(() => {
+    getTrendingMovies()
+      .then((res) => {
+        setMovieData(res && res.data.results);
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
   const onClickSearch = (query) => {
     let params = {
